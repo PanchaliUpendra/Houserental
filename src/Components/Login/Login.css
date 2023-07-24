@@ -1,0 +1,84 @@
+.login-container{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-cont-form{
+    width: 380px;
+    background: white;
+    padding:5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    box-shadow: -11px 5px 90px -46px rgba(0,0,0,0.75);
+}
+
+.login-form-divs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.login-form-divs>label{
+    color: black;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+}
+
+.login-form-divs>input{
+    height: 30px;
+    padding: 5px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 0.8rem;
+}
+
+.login-form-divs>input::placeholder{
+   color: rgb(172, 171, 171);
+}
+.login-form-divs>input:focus{
+    outline: none;
+}
+
+.login-submit-btn>button{
+    width: 100%;
+    height: 40px;
+    margin-top: 3%;
+    border: none;
+    background-color: #1E2167;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.login-submit-btn>button:hover{
+    background-color: #2a2e85;
+    cursor: pointer;
+}
+.login-submit-btn{
+    text-align: center;
+}
+
+.login-button-signup{
+    color: #1E2167;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media screen and (max-width:430px){
+    .login-cont-form{
+        width: 80%;
+        padding: 10%;
+        box-shadow: none;
+    }
+    .login-form-divs>label{
+        font-size: 1rem;
+    }
+}

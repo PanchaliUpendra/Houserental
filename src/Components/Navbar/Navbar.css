@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&family=Fira+Sans:wght@300;400;500&family=Inter:wght@100;300;400;500;600;700&family=Kanit:wght@300;400;700&family=Oswald:wght@200&family=PT+Serif:wght@400;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@300;400;600;700&family=Vollkorn:wght@400;600;800&display=swap');
+.Navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: rgba(244, 242, 242, 1);
+    user-select: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: sticky;
+    top:0;
+    scroll-behavior: smooth;
+    z-index: 999;
+}
+.Navbar-container>ul{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.Navbar-container>ul li{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Navbar-container>ul li:hover{
+    cursor: pointer;
+}
+.Navbar-container-login-reg{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.Navbar-container-login-reg-nth-child-1{
+    padding: 10px 50px;
+    background: #E7E7E7;
+    border-radius: 3px;
+    color: #1E2167;
+    transition: background-color 0.3s ease;
+}
+.Navbar-container-login-reg-nth-child-2{
+    padding: 10px 50px;
+    background: #1E2167;
+    border-radius: 3px;
+    color: white;
+    transition: all 0.3s ease;
+}
+.Navbar-container-login-reg-nth-child-1:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.Navbar-container-login-reg-nth-child-2:hover{
+    color: #1E2167;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* animation memu click css */
+
+.hamburger {
+    cursor: pointer;
+    
+  }
+  
+  .hamburger input {
+    display: none;
+   
+  }
+  
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    
+    fill: none;
+    stroke: #1E2167;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+ 
+  .hamburger input .menu {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input .close{
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+/* mennu animations ends here*/
+.second-navbar-hidden-ul{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    left:-300px;
+    top:0;
+    width:0;
+    opacity:1;
+    background-color: #1E2167;
+    transition:all 1s ease;
+    min-height: 100vh;
+    z-index: 999;
+}
+.second-navbar-hidden-ul>ul li{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-top: 5%;
+}
+
+/*second nnavbar css */
+.second-naverbar-ul{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    left:0;
+    top:0;
+    width:60%;
+    background-color: #1E2167;
+    height:100vh; 
+    transition:all 1s ease;
+    animation-name: animation1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    z-index:999;
+    min-height: 100vh;
+}
+@keyframes animation1{
+  
+    0%{
+       
+        width: 30%;
+    }
+    
+    100%{
+       
+        width: 60%;
+    }
+}
+
+.second-naverbar-ul>ul li{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-top: 5%;
+}
+
+
+@media screen and (min-width:1164px)
+{
+    .Navbar-container-login-reg-part2{
+        display: none;
+    }
+    .second-naverbar-ul{
+        display: none;
+    }
+}
+@media screen and (max-width:1164px)
+{
+    .Navbar-container-login-reg{
+        display: none;
+    }
+    .Navbar-container>ul{
+        display: none;
+    }
+
+}

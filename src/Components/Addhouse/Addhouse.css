@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&family=Inter:wght@500;600&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@200;800&family=Roboto+Slab:wght@400;600&display=swap');
+
+
+.addhouse-container{
+    min-height: 95vh;
+    background: #EAEEF5;
+}
+
+.addhouse-header-note{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.7rem;
+    color: rgb(155, 155, 155);
+    padding-top: 1%;
+}
+
+.addhouse-form-house-details{
+    width: 670px;
+    padding: 2%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.addhouse-form-house-details>form{
+    width: 100%;
+    
+}
+
+.house-details-all-parts{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.house-details-all-parts>div{
+    width: 100%;
+}
+.addhouse-input-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.addhouse-input-div>label{
+    font-family: 'Roboto Slab', serif;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.addhouse-input-div>input{
+    border: 1.4px solid rgb(171, 171, 171);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 30px;
+    color: grey;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1rem;
+}
+
+.addhouse-input-div>input:focus{
+    outline: none;
+    border-color: rgb(186, 244, 99);
+}
+
+.addhouse-input-div>textarea{
+    min-height: 130px;
+}
+
+.addhouse-final-btn{
+    text-align: center;
+}
+
+.addhouse-final-btn>button{
+    background-color: #1E2167;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1rem;
+    border-radius: 3px;
+}
+
+.addhouse-final-btn>button:hover{
+    cursor: pointer;
+    background-color: #3235a1;
+}
+
+.addhouse-input-div>textarea{
+    resize: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width:600px){
+    .addhouse-header-note{
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width:775px){
+    .house-details-all-parts{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .addhouse-form-house-details{
+        width: 90%;
+    }
+
+}

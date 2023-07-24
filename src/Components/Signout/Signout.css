@@ -1,0 +1,17 @@
+.login-cont-form-dividing-parts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.login-cont-form-dividing-parts>div{
+    width: 100%;
+}
+
+@media screen and (max-width:400px){
+    .login-cont-form-dividing-parts{
+        flex-direction: column;
+        gap: 0;
+    }
+}
