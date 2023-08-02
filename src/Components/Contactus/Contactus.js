@@ -28,7 +28,7 @@ const Contactus = (props) => {
 
   return (
     <>
-    <div className="contactus-container" >
+    <div className="contactus-container" ref={props.scrollcontact}>
         <div className="contactsus-inner-container-part1">
             <h1>About Contact Us</h1>
             <p>

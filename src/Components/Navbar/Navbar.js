@@ -26,6 +26,12 @@ function Navbar(props){
             navigate('/signin');
         }
     }
+
+    function handleuseref(et){
+        setTimeout(()=>{
+            props.handlescroll(et)
+        },1000);
+    }
     return(
         <>
         
@@ -33,8 +39,8 @@ function Navbar(props){
         <NavLink to={'/'}><img src={Logoimg} alt="logo" className="navbar-logo"/></NavLink>
         <ul className="Navbar-container-ul">
             <NavLink to={'/'}> <li>Home</li> </NavLink>
-            <NavLink to={'/'}><li >About Us</li></NavLink>
-            <NavLink to={'/'}><li >Contact Us</li></NavLink>
+            <NavLink to={'/'} onClick={()=>handleuseref('cabout')}><li >About Us</li></NavLink>
+            <NavLink to={'/'} onClick={()=>handleuseref('ccontactus')}><li >Contact Us</li></NavLink>
             {/* <NavLink to={'/Addhouse'}> <li>AddHouse</li> </NavLink> */}
             <li onClick={()=>handlenavigate('/addhouse')}>AddHouse</li>
             {/* <NavLink to={'/searchhouse'}> <li>Search House</li> </NavLink> */}

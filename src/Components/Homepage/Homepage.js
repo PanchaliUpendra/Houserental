@@ -32,7 +32,7 @@ function Homepage(props){
 
         {/* about div starts here */}
 
-        <div className="about-container" >
+        <div className="about-container" ref={props.scrollabout}>
             <div className="about-inner-container-one">
                 <h1>About us</h1>
                 <h1>About <span className="about-inner-container-one-about-span">House Rent</span></h1>
@@ -46,7 +46,7 @@ function Homepage(props){
                 since the 1500s, when an unknown printer took a galley of type and scrambled 
                 it to make a type specimen book. It has survived not only five centuries, but also 
                 the leap into electronic typesetting, remaining essentially unchanged.</p>
-                <button className="btn">
+                <button className="btn" onClick={()=>props.handlescroll('cmoreabout')}>
                     <span className="btn-text-one">More About Us</span>
                     <span className="btn-text-two">Great!</span>
                 </button>
@@ -63,7 +63,7 @@ function Homepage(props){
         </div>
 
         {/* more about container */}
-        <div className="more-about-container">
+        <div className="more-about-container" ref={props.scrollmoreabout}>
             <div className="more-about-inner-container">
                 <h1>About us</h1>
                 <h1>About <span className="about-inner-container-one-about-span">House Rent</span></h1>
@@ -178,7 +178,7 @@ function Homepage(props){
             <img src={subscribe} alt="subscribeimg" className="features-container-img"/>
             </div>
         </div>
-       <Contactus userdetl={props.userdetl}/>
+       <Contactus userdetl={props.userdetl} scrollcontact={props.scrollcontact}/>
         {/* footer homepage container */}
         <div className="footer-container">
             {/* part1 */}

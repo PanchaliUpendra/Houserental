@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect, useRef} from 'react';
 import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Loading from './Components/Loading/Loading';
@@ -9,6 +9,7 @@ import Login from './Components/Login/Login';
 import Signout from './Components/Signout/Signout';
 import Addhouse from './Components/Addhouse/Addhouse';
 import Searchhouse from './Components/Searchhouse/Searchhouse';
+
 
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './Firebase';
@@ -34,17 +35,33 @@ function App() {
     }
   });
 
+  const scrollabout=useRef(null);
+  const scrollcontact=useRef(null);
+  const scrollmoreabout = useRef(null);
+
+  function handlescroll(eprop){
+    if(eprop==='cabout'){
+      scrollabout.current.scrollIntoView({behavior:'smooth',block:'start'});
+    }else if(eprop==='ccontactus'){
+      scrollcontact.current.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    else if(eprop==='cmoreabout'){
+      scrollmoreabout.current.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  }
+
   return (
    <>
    {displayname?<Loading/>:
    <BrowserRouter>
-   <Navbar userdetl={userdetl}/>
+   <Navbar userdetl={userdetl} handlescroll={handlescroll}/>
       <Routes>
-        <Route path='/' element={<Homepage userdetl={userdetl}/>}/>
+        <Route path='/' element={<Homepage userdetl={userdetl} scrollabout={scrollabout} scrollcontact={scrollcontact} scrollmoreabout={scrollmoreabout} handlescroll={handlescroll}/>}/>
         <Route path={userdetl?'/Notfound':'/signin'} element={<Login/>}/>
         <Route path={userdetl?'/Notfound':'/signup'} element={<Signout/>}/>
         <Route path='/addhouse' element={<Addhouse/>}/>
         <Route path={userdetl?'/searchhouse':'/Notfound'} element={<Searchhouse/>}/>
+        
         <Route path='*' element={<Pagenot/>}/>
       </Routes>
         
