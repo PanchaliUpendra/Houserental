@@ -59,8 +59,15 @@ function Navbar(props){
         <div className={resnav===true ?"second-naverbar-ul":"second-navbar-hidden-ul"}>
         <ul className="Navbar-container-ul">
             <NavLink to={'/'} onClick={()=>{setres(!resnav)}}> <li>Home</li> </NavLink>
-            <NavLink to={'/'} onClick={()=>{setres(!resnav)}}><li >About Us</li></NavLink>
-            <NavLink to={'/'} onClick={()=>{setres(!resnav)}}><li >Contact Us</li></NavLink>
+            <NavLink to={'/'} onClick={()=>{
+                handleuseref('cabout');
+                setres(!resnav);
+
+            }}><li >About Us</li></NavLink>
+            <NavLink to={'/'} onClick={()=>{
+            handleuseref('ccontactus');
+            setres(!resnav);
+            }}><li >Contact Us</li></NavLink>
             <NavLink to={'/Addhouse'} onClick={()=>setres(!resnav)}> <li>AddHouse</li> </NavLink>
             <NavLink to={'/findhouse'} onClick={()=>setres(!resnav)}> <li>Search House</li> </NavLink>
             <ul>

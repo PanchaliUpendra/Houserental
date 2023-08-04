@@ -9,6 +9,7 @@ import Login from './Components/Login/Login';
 import Signout from './Components/Signout/Signout';
 import Addhouse from './Components/Addhouse/Addhouse';
 import Searchhouse from './Components/Searchhouse/Searchhouse';
+import Userprofile from './Components/Userprofile/Userprofile';
 
 
 import { onAuthStateChanged } from "firebase/auth";
@@ -61,7 +62,7 @@ function App() {
         <Route path={userdetl?'/Notfound':'/signup'} element={<Signout/>}/>
         <Route path='/addhouse' element={<Addhouse/>}/>
         <Route path={userdetl?'/searchhouse':'/Notfound'} element={<Searchhouse/>}/>
-        
+        <Route path={userdetl?'/userprofile':'/Notfound'} element={<Userprofile/>}/>
         <Route path='*' element={<Pagenot/>}/>
       </Routes>
         
